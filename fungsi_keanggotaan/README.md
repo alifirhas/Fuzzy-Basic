@@ -9,8 +9,8 @@ Kurva Linear akan mengambil 2 masukan yaitu
 
 Kurva Linear dibedakan menjadi 2 jenis, yaitu
 
-- Kurva Linear Naik --> a > b
-- Kurva Linear Turun --> a < b
+- Kurva Linear Naik
+- Kurva Linear Turun
 
 ### Kurva Linear Naik
 
