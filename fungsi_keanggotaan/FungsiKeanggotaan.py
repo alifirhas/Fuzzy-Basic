@@ -20,8 +20,16 @@ class FungsiKeanggotaan:
             return (b-x)/(b-a)
         return False
 
-    def segitiga(self):
-        return "Ini Segitiga"   
+    def segitiga(self, a, b, c, x):
+        if x <= a or x >= c:
+            return 0
+        elif x == b:
+            return 1
+        elif x >= a and x < b:
+            return (b-x)/(b-a)
+        elif x > b and x <= c:
+            return (c-x)/(c-b)
+        return False   
 
     def trapesium(self):
         return "Ini Trapesium"  
