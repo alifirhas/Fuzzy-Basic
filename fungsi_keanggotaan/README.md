@@ -174,4 +174,63 @@ def segitiga(self, a, b, c, x):
 * * *
 ## Kurva Trapesium
 
+Kurva Segitiga akan mengambil 4 masukan yaitu
+  
+- a : titik awal
+- b : titik tengah 1
+- c : titik tengah 2
+- d : titik akhir
 
+![](../attachments/2021-10-30-23-38-20.png)
+
+Rumus untuk menentukan derajat keanggotaan dari suatu nilai pada Kurva Linear Naik adalah dengan menggunakan rumus berikut
+
+![](../attachments/2021-10-30-23-39-24.png)
+
+Yang diterjemahkan dalam bentuk flowchart menjadi seperti
+
+![](../attachments/Fungsi-Keanggotaan-Trapesium.jpg)
+
+Yang diterjemahkan ke dalam bentuk program python, menjadi
+
+```python
+a = 15
+b = 24
+c = 27
+d = 35
+nilai = 24
+
+def trapesium(self, a, b, c, d, x):
+    if x <= a or x >= d:
+        return 0
+    elif x > a and x <= b:
+        return (x-a)/(b-a)
+    elif x > b and x <= c:
+        return 1
+    elif x > c and x < d:
+        return (d-x)/(d-c)
+
+derajat = fk.trapesium(a, b, c, d, nilai)
+```
+
+Rumus memliki masalah
+> Jika nilai == b maka output adalah bilangan decimal 1
+
+Sehingga rumus disesuaikan menjadi
+```
+x > a and x < b     --> x == b tidak akan dihitung lagi
+x >= b and x <= c   --> x == b akan masuk kesini dan return 1
+```
+
+Penerapannya
+```python
+def trapesium(self, a, b, c, d, x):
+    if x <= a or x >= d:
+        return 0
+    elif x > a and x < b:
+        return (x-a)/(b-a)
+    elif x >= b and x <= c:
+        return 1
+    elif x > c and x < d:
+        return (d-x)/(d-c)
+```

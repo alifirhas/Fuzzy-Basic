@@ -15,15 +15,25 @@ def main():
     # print(derajat2)
 
     # ! Kurva Segitiga
-    a = 15
-    b = 25
-    c = 35
-    nilai = 30
-    derajat = fk.segitiga(a, b, c, nilai)
+    # a = 15
+    # b = 25
+    # c = 35
+    # nilai = 30
+    # derajat = fk.segitiga(a, b, c, nilai)
     
-    print("Kurva Segitiga")
-    print(derajat)
+    # print("Kurva Segitiga")
+    # print(derajat)
 
+    # ! Kurva Trapesium
+    a = 15
+    b = 24
+    c = 27
+    d = 35
+    nilai = 24
+    derajat = fk.trapesium(a, b, c, d, nilai)
+    
+    print("Kurva Trapesium")
+    print(derajat)
 
 if __name__ == '__main__':
     main()

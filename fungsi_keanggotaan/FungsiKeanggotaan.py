@@ -31,9 +31,13 @@ class FungsiKeanggotaan:
             return (c-x)/(c-b)
         return False   
 
-    def trapesium(self):
-        return "Ini Trapesium"  
-
-# fk = FungsiKeanggotaan();
-
-# print(fk.liniear())
+    def trapesium(self, a, b, c, d, x):
+        if x <= a or x >= d:
+            return 0
+        elif x > a and x < b:
+            return (x-a)/(b-a)
+        elif x >= b and x <= c:
+            return 1
+        elif x > c and x < d:
+            return (d-x)/(d-c)
+        return False
